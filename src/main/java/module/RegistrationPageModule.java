@@ -34,7 +34,15 @@ public class RegistrationPageModule
 				reuse.selectbyvalue(elements.year,testMapData.get(ConfigReader.getProperty("year")));
 				reuse.selectbyvalue(elements.month,testMapData.get(ConfigReader.getProperty("month")));
 				reuse.selectbyvalue(elements.date,testMapData.get(ConfigReader.getProperty("date")));
-				reuse.selectbyvalue(elements.licensePeriod,testMapData.get(ConfigReader.getProperty("provision")));
+				if(testMapData.get(ConfigReader.getProperty("provision")).matches("Full"))
+					{
+						reuse.click(elements.licensePeriodfull);
+					}
+					
+				else 
+					{
+						reuse.click(elements.licensePeriodProvisional);
+					}
 				reuse.selectbyvalue(elements.licensePeriodYears,testMapData.get(ConfigReader.getProperty("licensePeriod")));
 				reuse.selectbyvalue(elements.occupation,testMapData.get(ConfigReader.getProperty("occupation")));
 				reuse.scrolldrown(driver);

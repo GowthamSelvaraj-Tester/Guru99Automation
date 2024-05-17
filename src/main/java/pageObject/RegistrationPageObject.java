@@ -41,8 +41,11 @@ public class RegistrationPageObject
 		@FindBy(name="date")
 		public List<WebElement> date;
 		
-		@FindBy(xpath ="//*[@type='radio']")
-		public List<WebElement> licensePeriod;
+		@FindBy(xpath ="//*[@type='radio'and @value='Full']")
+		public WebElement licensePeriodfull;
+		
+		@FindBy(xpath ="//*[@type='radio'and @value='Provisional']")
+		public WebElement licensePeriodProvisional;
 		
 		@FindBy(id="user_licenceperiod")
 		public List<WebElement> licensePeriodYears;
