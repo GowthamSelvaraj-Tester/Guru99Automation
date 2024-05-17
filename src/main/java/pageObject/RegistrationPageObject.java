@@ -32,13 +32,13 @@ public class RegistrationPageObject
 		@FindBy(id="user_phone")
 		public WebElement phoneNumber;
 		
-		@FindBy(id="user_dateofbirth_1i")
+		@FindBy(name="year")
 		public List<WebElement> year;
 		
-		@FindBy(id="user_dateofbirth_2i")
+		@FindBy(name="month")
 		public List<WebElement> month;
 		
-		@FindBy(id="user_dateofbirth_3i")
+		@FindBy(name="date")
 		public List<WebElement> date;
 		
 		@FindBy(xpath ="//*[@type='radio']")

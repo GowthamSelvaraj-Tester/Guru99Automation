@@ -26,16 +26,18 @@ public class RegistrationPageModule
 		@Step("Register Account")
 		public void Register(Map<String, String>testMapData)
 			{
-				//reuse.selectbyvalue(elements.tileList,testMapData.get(ConfigReader.getProperty("title")));
+				reuse.selectbyvalue(elements.tileList,testMapData.get(ConfigReader.getProperty("title")));
 				reuse.entertext(elements.firstName,testMapData.get(ConfigReader.getProperty("firstName")));
 				reuse.entertext(elements.surName,testMapData.get(ConfigReader.getProperty("surName")));
 				reuse.entertext(elements.phoneNumber,testMapData.get(ConfigReader.getProperty("phoneNum")));
+				reuse.scrolldrown(driver);
 				reuse.selectbyvalue(elements.year,testMapData.get(ConfigReader.getProperty("year")));
 				reuse.selectbyvalue(elements.month,testMapData.get(ConfigReader.getProperty("month")));
 				reuse.selectbyvalue(elements.date,testMapData.get(ConfigReader.getProperty("date")));
 				reuse.selectbyvalue(elements.licensePeriod,testMapData.get(ConfigReader.getProperty("provision")));
 				reuse.selectbyvalue(elements.licensePeriodYears,testMapData.get(ConfigReader.getProperty("licensePeriod")));
 				reuse.selectbyvalue(elements.occupation,testMapData.get(ConfigReader.getProperty("occupation")));
+				reuse.scrolldrown(driver);
 				reuse.entertext(elements.address,testMapData.get(ConfigReader.getProperty("street")));
 				reuse.entertext(elements.city,testMapData.get(ConfigReader.getProperty("city")));
 				reuse.entertext(elements.country,testMapData.get(ConfigReader.getProperty("country")));

@@ -3,8 +3,11 @@ package actions;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -45,7 +48,12 @@ public class Actions
 						WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 						wait.until(ExpectedConditions.visibilityOf(element));
 						Select select = new Select(element);
-						select.selectByValue(value);
+						select.selectByVisibleText(value);
 					}
+			}
+		public void scrolldrown(WebDriver driver)
+			{
+			      JavascriptExecutor js = (JavascriptExecutor)driver;
+			      js.executeScript("window.scrollBy(0,500)","");
 			}
 	}
