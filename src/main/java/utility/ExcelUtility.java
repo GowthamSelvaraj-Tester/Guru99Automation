@@ -2,7 +2,6 @@ package utility;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -102,6 +101,8 @@ public class ExcelUtility
 				}
 		}
 	
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Map getdata(String testCaseName, String sheetPath, String sheetName) throws Exception
 		{
 			Map dataMap= new HashMap<String, String>();
@@ -114,7 +115,7 @@ public class ExcelUtility
 						{
 							String cellData = null;
 							cell = excelSheet.getRow(dataRow).getCell(i);
-							if(cell!=null && cell.getCellType() == CellType.NUMERIC)
+							if(cell!= null && cell.getCellType() == CellType.NUMERIC)
 								{
 									cell.setCellType(CellType.STRING);
 								}

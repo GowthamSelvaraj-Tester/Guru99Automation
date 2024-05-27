@@ -22,7 +22,8 @@ public class RegistrationScript
 				module = new RegistrationPageModule(driver);
 			}
 		
-		public void RegistrationTest(String testCaseName)
+		@SuppressWarnings("unchecked")
+		public void RegistrationTest (String testCaseName)
 			{
 				try 	
 					{
@@ -34,5 +35,4 @@ public class RegistrationScript
 						e.printStackTrace();
 					}
 			}
-		
 	}
