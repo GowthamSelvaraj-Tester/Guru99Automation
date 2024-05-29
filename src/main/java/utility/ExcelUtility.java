@@ -44,7 +44,7 @@ public class ExcelUtility
 									{
 										break;
 									}	
-						}
+						}	
 				}
 			catch (Exception e)
 				{
@@ -118,7 +118,7 @@ public class ExcelUtility
 							if(cell!= null && cell.getCellType() == CellType.NUMERIC)
 								{
 									cell.setCellType(CellType.STRING);
-								}
+								} 
 							if(cell!=null)
 								{
 									cellData = cell.getStringCellValue();
@@ -134,6 +134,5 @@ public class ExcelUtility
 				}
 			
 			return dataMap;
-			
 		}
 	}

@@ -22,7 +22,7 @@ public class RegistrationScript
 				module = new RegistrationPageModule(driver);
 			}
 		
-		@SuppressWarnings("unchecked")
+		@SuppressWarnings({ "unchecked"})
 		public void RegistrationTest (String testCaseName)
 			{
 				try 	
